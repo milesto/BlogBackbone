@@ -1,13 +1,10 @@
 class PostsController < InheritedResources::Base
-  def create
-    create! do |success, failure|
-      success.html { redirect_to root_url }
-    end
-  end
 
-  def update
-    update! do |success, failure|
-      success.html { redirect_to root_url }
+  [:create, :update, :destroy].each do |action|
+    define_method action do
+      send "#{action}!" do |success, failure|
+        success.html { redirect_to root_url }
+      end
     end
   end
 

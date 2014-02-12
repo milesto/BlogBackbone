@@ -12,7 +12,7 @@ App.Routers.PostsRouter = Backbone.Router.extend({
     show: function (id) {
         var post = new App.Models.Post({id: id});
         var collection = new App.Collections.PostsCollection([post]);
-        var show_view = new App.Views.PostView({model: post})
+        var show_view = new App.Views.PostShowView({model: post})
         post.fetch({success: function(){
             $('#posts').html(show_view.render().el);
         }});

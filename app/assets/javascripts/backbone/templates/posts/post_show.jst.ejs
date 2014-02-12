@@ -1,6 +1,4 @@
-<h3 class="title">
-    <a href="/posts/<%= post.id %>" class="backbone-link"><%= post.title %></a>
-</h3>
+<h3 class="title"><%= post.title %></h3>
 
 <div class="content">
     <%= post.content %>
@@ -8,6 +6,12 @@
 
 <div class="buttons">
     <ul class="inline text-right">
+        <li>
+            <a class="btn btn-info btn-mini backbone-link" href="/">
+                <i class="icon-arrow-left icon-white"></i> Back
+            </a>
+        </li>
+
         <li>
             <a class="btn btn-success btn-mini post-edit" href="/posts/<%= post.id %>/edit">
                 <i class="icon-pencil icon-white"></i> Edit
@@ -18,6 +22,8 @@
         </li>
     </ul>
 </div>
+
+
 
 
 

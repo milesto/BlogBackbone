@@ -1,9 +1,9 @@
-App.Views.PostView = Backbone.View.extend({
-    template: JST["backbone/templates/posts/_post"],
+App.Views.PostShowView = Backbone.View.extend({
+    template: JST["backbone/templates/posts/post_show"],
     tagName: 'div',
-    className: 'span6 offset3 post',
+    className: 'span12 post',
     events: {
-      'click .post-remove': 'removePost'
+        'click .post-remove': 'removePost'
     },
     initialize: function(){
         this.listenTo(this.model, 'change', this.render);

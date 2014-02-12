@@ -1,1 +1,33 @@
-<%= debug @post %>
+<div class="post">
+  <h3 class="title"><%= @post.title %></h3>
+
+  <div class="content">
+    <%= @post.content %>
+  </div>
+
+  <div class="buttons">
+    <ul class="inline text-right">
+      <li>
+        <%= link_to root_url, class: "btn btn-info btn-mini backbone-link" do %>
+            <i class="icon-arrow-left icon-white"></i> Back
+        <% end %>
+      </li>
+
+      <li>
+        <%= link_to edit_post_path(@post), class: "btn btn-success btn-mini post-edit" do %>
+            <i class="icon-pencil icon-white"></i> Edit
+        <% end %>
+      </li>
+      <li>
+        <%= link_to post_path(@post), method: :delete, class: "btn btn-danger btn-mini post-remove" do %>
+            <i class="icon-remove icon-white"></i> Remove
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+

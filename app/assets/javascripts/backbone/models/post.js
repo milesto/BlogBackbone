@@ -7,6 +7,6 @@ App.Models.Post = Backbone.Model.extend({
 });
 
 App.Collections.PostsCollection = Backbone.Collection.extend({
-    url: 'api/v1/posts',
+    url: '/api/v1/posts',
     model: App.Models.Post
 });
