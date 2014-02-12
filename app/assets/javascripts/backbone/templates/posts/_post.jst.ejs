@@ -1,0 +1,20 @@
+<h3 class="title">
+    <a href="#/posts/<%= model.id %>"><%= model.title %></a>
+</h3>
+
+<div class="content">
+    <%= model.content %>
+</div>
+
+<div class="buttons">
+    <ul class="inline text-right">
+        <li>
+            <a class="btn btn-success btn-mini post-edit" href="/posts/<%= model.id %>/edit">
+                <i class="icon-pencil icon-white"></i> Edit
+            </a>
+        </li>
+        <li>
+            <button class="btn btn-danger btn-mini post-remove"><i class="icon-remove icon-white"></i> Remove</button>
+        </li>
+    </ul>
+</div>
